@@ -1,0 +1,2427 @@
+/*******************************************************
+
+               /r/runescape Style 2017
+            Coded By: /u/Kolumbz (@JokingRS)
+                
+*******************************************************/
+
+/*------------ 1.0 Header ------------*/
+
+    #header {
+		position: relative;
+		height: 213px;
+		background: url(%%1080p%%) left repeat;
+		background-color: #0860c2;
+		z-index: 100;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+	
+	@media screen and (min-width: 1921px) { 
+		#header {
+		    background: url(%%2k%%) left no-repeat;
+		}
+	}
+
+	@media screen and (min-width: 2561px) { 
+		#header {
+		    background: url(%%4k%%) left no-repeat;
+		}
+	}
+	
+	#sr-header-area {
+	    background: rgba(0,0,0,0.4) !important;
+	    border-bottom: 1px solid rgba(0,0,0,0.5) !important;
+	}
+	
+	#sr-header-area .sr-list a.choice {
+        color: white;
+	}
+	
+	#sr-header-area .title {
+	    color: white;
+	    font-weight: bold;
+	}
+
+	#header-bottom-left {
+	    height: 100%;
+	    position: relative;
+	    top: -18px;
+	    z-index: -1;
+	}
+	
+	#header-bottom-right {
+		background-color: rgba(0,0,0,0.7) !important;
+		-webkit-border-radius: 0 !important;
+		-moz-border-radius: 0 !important;
+		border-radius: 0 !important;
+		border-bottom: 1px solid rgba(0,0,0,0.85);
+	    border-left: 1px solid rgba(0,0,0,0.85);
+		padding: 5px;
+		top: 10px;
+		bottom: auto;
+		z-index: 200;
+	}
+	
+	#header-bottom-right span {
+	    color: white;
+	}
+	
+	#header-img {
+    	position: absolute;
+    	left: 105px;
+    	top: 50px;
+    	z-index: 420420;
+	}
+	
+	.submit-page #header-img {
+	    top: 72.5px;
+	}
+
+	#header .pagename {
+	   font-size: 0;
+	}
+
+	#header .pagename a {
+    	position: absolute;
+    	display: block;
+        left: 175px;
+    	top: 35px;
+    	height: 105px;
+    	width: 345px;
+    	background: transparent url(%%sprite%%) no-repeat -0px -186px;
+    	z-index: 420420;
+	}
+	
+	.submit-page #header .pagename a {
+	    top:50%;
+	    margin-top: -50px;
+	}
+	
+	.infobar {
+	    margin: 0 !important;
+	}
+
+	/*------------ 1.1 Navigation ------------*/
+    		#header .tabmenu {
+    			position: absolute;
+    			z-index: 100;
+    			left: 0;
+    			bottom: 0;
+    			margin: 0;
+    			padding: 0;
+    			width: 100%;
+    			background: url(%%nav-bg-start%%),
+    			            url(%%nav-bg%%);
+    			background-repeat: no-repeat, repeat-x;
+    			background-position: 0 50px;
+    		}
+    
+    		#header .tabmenu li 
+    		{
+    			display: table-cell;
+    			height: 31px;
+    			padding-top: 69px;
+    		}
+    
+    		#header .tabmenu li:first-child{
+    			padding-left: 34px;
+    		}
+    
+    		#header .tabmenu li:first-child:before{
+    			content: " ";
+    			position: absolute;
+    			left: 0;
+    			top: 0;
+    			background: url(%%sprite%%) no-repeat -345px -186px;
+    		    height: 100px;
+                width: 30px
+    		}
+    
+    		#header .tabmenu li:first-child:after {
+    			content: " ";
+    			position: absolute;
+    			top: 4px;
+    			left: 0;
+                background: url(%%sprite%%) no-repeat -285px -130px;
+                height: 47px;
+                width: 199px
+    		}
+    
+    		#header .tabmenu li:last-child {
+    			width: 100% !important;
+    			border-style: solid;
+    			border-width: 0 30px 0 0;
+    			-moz-border-image: url(%%nav-right%%) 0 30;
+    			-webkit-border-image: url(%%nav-right%%) 0 30;
+    			-o-border-image: url(%%nav-right%%) 0 30;
+    			border-image: url(%%nav-right%%) 0 30;
+    		}
+    
+    		#header .tabmenu li a {
+    			text-transform: uppercase;
+    			background-color: transparent;
+    			color: #dab830;
+    			padding: 0px 12px;
+    		}
+    
+    		#header .tabmenu li a:hover {
+    			color: white;
+    		}
+    
+    		#header .tabmenu li.selected a{
+    			border: 0;
+    			color: white;
+    		}
+    
+    		#header .tabmenu li.selected:nth-child(n+1) a{
+    			border-left: thin solid #50595e;
+    			-webkit-box-shadow: -1px 0px 0px 0px rgba(0, 0, 0, 0.6);
+    			-moz-box-shadow:    -1px 0px 0px 0px rgba(0, 0, 0, 0.6);
+    			box-shadow:         -1px 0px 0px 0px rgba(0, 0, 0, 0.6);
+    		}
+    
+    		#header .tabmenu li a{
+    			padding-top: 17px;
+    			padding-bottom: 14px;
+    			border-left: thin solid #50595e !important;
+    			-webkit-box-shadow: -1px 0px 0px 0px rgba(0, 0, 0, 0.6) !important;
+    			-moz-box-shadow:    -1px 0px 0px 0px rgba(0, 0, 0, 0.6) !important;
+    			box-shadow:         -1px 0px 0px 0px rgba(0, 0, 0, 0.6) !important;
+    		}
+    
+    		#header .tabmenu li:first-child a{
+    			border-left: none !important;
+    			-webkit-box-shadow: none !important;
+    			-moz-box-shadow:    none !important;
+    			box-shadow:         none !important;
+    		}
+
+                
+/*------------ 2.0 Sidebar ------------*/
+
+    /*------------ 2.0 Main Properties ------------*/
+        .side {
+            position: relative;
+            padding: 0;
+            margin-right: 0;
+            margin-left: 25px;
+            background: url(%%sidebar-bg%%) repeat;
+            -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,1);
+            -moz-box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,1);
+            box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,1);
+            width: 340px;
+            color: #d7dbe1;
+        }
+    
+        .side:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 53px;
+            background: url(%%sidebar-top%%) repeat-x;
+            margin-bottom: 45px;
+        }
+        
+        .side:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 11px;
+            background: url(%%sidebar-border%%) repeat-y;
+            left: -11px;
+            top: 0;
+        }
+        
+        .side a {
+            color: #E1BB34;
+            transition: color 0.2s ease-in-out;
+        }
+        
+        .side a:hover {
+            color: #FFF2C5;
+        }
+
+        .side a[href$="futureupdates"] {
+            height: 75px;
+            display: block;
+            color: transparent !important;
+            background: url(%%futureupdate%%) no-repeat center center;
+            margin: 2px 0;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .side a[href$="futureupdates"]:hover {
+            background: url(%%futureupdate2%%) no-repeat center center;
+        }
+        
+        .side .titlebox div:not(.flairselector), .side .titlebox form {
+            color: #d7dbe1;
+            background: none;
+        }
+        
+        .side .spacer {
+            padding: 0 20px;
+        }
+        
+        .side > .spacer:last-of-type:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 11px;
+            background: url(%%sidebar-border-bottom%%) repeat-x;
+            bottom: -11px;
+            left: 0;
+        }
+    
+        .side > .spacer:last-of-type:after {
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            left: -13px;
+            width: 23px;
+            height: 26px;
+            background: url(%%sprite%%) no-repeat;
+            background-position: -537px -130px;
+            z-index: 2147483647;
+        }
+    
+        .side .flairselector {
+            left: auto !important;
+            right: 0 !important;
+        }
+        
+        .flairselector {
+            top: auto !important;
+        }
+        
+        .side #search {
+            position: relative;
+        }
+        
+        .side #search input[type="text"], .side .res-nightmode #search input[type="text"] {
+            width: 100%;
+            background: #010709 !important;
+            padding: 14px 50px 14px 12px;
+            border: 1px solid #355563 !important;
+            border-radius: 5px;
+            color: #aed0e0;
+        }
+        
+        .side #search input[type="text"]:focus {
+            background: #062127;
+            outline: 0;
+        }
+        
+        #searchexpando {
+            background: #010709 !important;
+            border: 1px solid #355563 !important;
+            margin-top: 10px !important;
+        }
+    
+        .sponsorshipbox {
+            margin: 0 auto;
+        }
+        
+        .side .submit .morelink {   
+            border: 0;
+            height: 40px;
+            background: none;
+            padding: 0 6px 0 9px;
+        }  
+        
+        .side .submit .morelink a {  
+            background: url(%%sprite-btn%%) repeat-x 0 -102px;
+    
+            color: black;
+            /*text-shadow: 1px 1px 1px #dcb421;*/
+           
+            text-transform: none;
+            font-weight: bold;
+            font-size:16px;
+            padding: 5px 0;
+        }
+    
+        .side .submit .morelink a:before,
+        .side .submit .morelink a:after {
+            content: "";
+            position: absolute;
+            height: 52px;
+            width: 12px;
+            top: 0;
+            background: url(%%sprite-btn%%) no-repeat;
+        }
+        
+        .side .submit .morelink a:before {
+            background-position: left 0;
+            left: -1px;
+        }
+        .side .submit .morelink a:after {
+            background-position: right -203px;
+            right: -6px;
+        }
+        
+        .side .submit .morelink a:hover {
+            background-position: 0 -153px;
+        }
+        
+        .side .submit .morelink a:hover:before {
+            background-position: 0 -51px;
+        }
+        
+        .side .submit .morelink a:hover:after {
+            background-position: right -254px
+        }
+        
+        .side .submit.disabled .morelink a:hover {
+            background-position: 0 -102px;
+        }
+        .side .submit.disabled .morelink a:hover:before {
+            background-position: left 0;
+        }
+        .side .submit.disabled .morelink a:hover:after {
+            background-position: right -203px;
+        }
+    
+        .nub {display:none;}
+        
+        .side .redditname {
+            display: none;
+        }
+        
+        .side .sidecontentbox ul.content {
+            background: #010709;
+            border: 1px solid #355563;
+            padding: 5px 10px;
+        }
+        
+        .side .sidecontentbox ul.content a {
+            background: none;
+        }
+        
+        .side .sidecontentbox h1 {
+            color: #B2DBEE;
+        }
+        
+        .side .sponsorshipbox {
+            border: 1px solid #355563;
+            background: #010709;
+            padding: 5px;
+        }
+        
+        .side .sponsorshipbox iframe {
+            width: 100% !important;
+        }
+        
+        .side .thing small span {
+            color: #d7dbe1;
+        }
+        
+        .side .submit.disabled .spacer {
+            background: none;
+        }
+        
+        .side .submit.disabled .spacer .subtitle {
+            font-weight: bold;
+            text-align: center;
+            color: #d7dbe1;
+        }
+        
+        .side .titlebox .bottom {
+            display: none;
+        }
+        
+        .side .create {
+            display: none;
+        }
+        
+        .side .linkinfo {
+            background: #010709 !important;
+            border: 1px solid #355563 !important;
+        }
+        
+        .side .usertext .md h2 {
+            background: url(%%sprite%%) no-repeat;
+            background-position: -2px -291px;
+            padding: 0 0 0 52px;
+            height: 39px;
+            margin: 0;
+            position: relative;
+            line-height: 52px;
+            z-index: 2;
+            font-weight: normal;
+            font-size: 16px;
+            color: #aed0e0;
+            text-shadow: 1px 1px 0px #1b2f39;
+        }
+        
+        .side .usertext .md h2:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 60px;
+            width: calc(100% - 90px);
+            z-index: -1;
+            height: 39px;
+            background: url(%%bg-header-small-2%%) repeat-x;
+        }
+        
+        .side .usertext .md h2:after {
+            content: "";
+            position: absolute;
+            background: url(%%sprite%%) no-repeat;
+            background-position: -62px -291px;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 39px;
+        }
+        
+        .side .usertext .md h2 a {
+            color: #aed0e0;
+            font-weight: bold;
+        }
+        
+        .side .usertext .md ul, .side .usertext .md blockquote {
+            background: url(%%side-content-bg%%) repeat;
+            border: 1px solid #33383a;
+            padding: 10px 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin: 0;
+        }
+        
+        .side .usertext .md blockquote {
+            padding: 10px;
+        }
+        
+
+        
+        body:not(.loggedin) .side .usertext .md h2:nth-of-type(2) {
+            margin-top: 95px;
+        }
+        
+        .sidecontentbox ul.content {
+            overflow: visible;
+        }
+
+        .beta-hint {
+            display: none;
+        }
+
+        @media all and (max-device-width: 640px) {
+            body:not(.loggedin) .side .usertext .md h2:nth-of-type(2) {
+                margin-top: 110px;
+            }
+            
+            .side ul {
+                list-style: none;
+                margin: 0;
+            }
+            
+            .side ul li {
+                padding: 2px 15px;
+            }
+        }
+      
+    .res-nightmode .side .usertext-body .md ol:nth-of-type(3) { background: none; }
+
+    /*------------ 2.2 UTC Clock ------------*/
+        @media all and (min-device-width: 640px) {
+            .side .md h2:nth-of-type(1) {
+                position: absolute;
+                content: "";
+                top: -188px;
+                /*left: 30px;*/
+                right: 3px;
+                background: url(%%sprite%%) no-repeat -224px -140px;
+                width: 52px;
+                color: #FFCB45;
+                font: 11px Arial,"Times New Roman",serif;
+                line-height: 21px;
+                padding: 3px 0px 5px 8px;
+                font-size: 14px;
+                text-shadow: 0px 1px black;
+                z-index: 999;
+                height: auto;
+                margin-top: 0.5555555555555556em;
+                margin-bottom: 0.5555555555555556em;
+            }
+            
+            .side .md h2:nth-of-type(1):hover {
+                cursor: pointer;
+            }
+    
+            .side .md h2:nth-of-type(1):hover:before {
+                content: "In-game UTC time, updates upon page refresh.";
+                position: absolute; 
+                display: block; 
+                top: -4px;
+                left: -260px;
+                padding: 5px; 
+                width: 240px; 
+                height: 20px;
+                border: 1px solid #333;
+                background: #1d1212; 
+                color: #f6f6f6; 
+                font-size: 11px; 
+                text-align: center; 
+                z-index: 1000; 
+                overflow: hidden; 
+            }
+            
+            .side .md h2:nth-of-type(1):after {
+                display: none;   
+            }
+        }
+        @media all and (max-device-width: 640px) {
+            .side .md h2:nth-of-type(1) {
+                display: none;
+            }
+        }
+/*------------ 2.2.1 Voice Of Seren ------------*/
+        .side .md ol:nth-of-type(1)  {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: url(%%side-content-bg%%) repeat;
+            border: 1px solid #33383a;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        .side .md ol:nth-of-type(1) li  {
+            display: table-cell;
+        }
+
+        .side .md ol:nth-of-type(1) li a {
+            display: block;
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        .side .md ol:nth-of-type(1) li a:before {
+            display: block;
+            content: "";
+            height: 86px;
+            background: url(%%vos%%);
+            top: 0;
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+
+        .side .md ol:nth-of-type(1) li a[href$="#amlodd"]:before {
+            background-position: 0 0;
+            width: 62px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#cadarn"]:before {
+            background-position: -62px 0;
+            width: 75px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#crwys"]:before {
+            background-position: -137px 0;
+            width: 70px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#hefin"]:before {
+            background-position: -205px 0;
+            width: 68px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#iorwerth"]:before {
+            background-position: -266px 0;
+            width: 90px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#ithell"]:before {
+            background-position: -353px 0;
+            width: 87px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#meilyr"]:before {
+            background-position: -434px 0;
+            width: 58px;
+        }
+
+        .side .md ol:nth-of-type(1) li a[href$="#trahaearn"]:before {
+            background-position: -486px 0;
+            width: 63px;
+        }
+
+     /*------------ 2.2.2 Game Updates ------------*/
+        .side .md ol:nth-of-type(2)  {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background: url(%%side-content-bg%%) repeat;
+            border: 1px solid #33383a;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .side .md ol:nth-of-type(2) li  {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 10px 10px 10px 60px;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .side .md ol:nth-of-type(2) li:before  {
+            position: absolute;
+            content: counter(step-counter);
+            margin-right: 5px;
+            font-size: 80%;
+            color: #aed0e0;
+            padding: 8px 10px;
+            border-radius: 20px;
+            left: 15px;
+            font-style: normal;
+            font-size: 15px;
+            z-index: 6;
+            background: #355563;
+        }
+
+        .side .md ol:nth-of-type(2) li:after  {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: #355563;
+            left: 29px;
+            z-index: 5;
+            top: 10px;
+        }
+
+        .side .md ol:nth-of-type(2) li:last-of-type:after {
+            display: none;
+        }
+
+        .side .md ol:nth-of-type(2) li a {
+            display: block;
+            padding-right: 10px;
+            background: none;
+            border: none;
+            color: #E1BB34 !important;
+            font-size: 15px;
+            font-style: normal;
+            padding: 2px 0;
+            
+        }
+
+        .side .md ol:nth-of-type(2) li a:hover {
+            color: #FFF2C5 !important;
+        }
+
+        .side .md ol:nth-of-type(2) li a:after {
+            display: none;
+        }
+
+        
+ /*------------ 2.3 Alerts ------------*/
+        @media all and (min-device-width: 640px) {
+            .side { position: relative; }
+            .side .md ol:nth-of-type(4)  {
+                position: absolute;
+                top: -140px;
+                left: -170px;
+                /*left: -418px;*/
+                width: 500px;
+                display: block;
+                z-index: 9999999;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            @media screen and (max-width: 1200px) { 
+    
+                .side .md ol:nth-of-type(4) {
+                    display: none;
+                }
+    
+            }
+    
+            .side .md ol:nth-of-type(4) li  {
+                padding: 2px 0 10px 0;
+                text-align: right;
+                margin-bottom: 10px;
+            }
+            
+            
+            .side .md ol:nth-of-type(4) li a {
+                position: relative;
+                background: url(%%strap-bg%%);
+                padding: 8px 90px 8px 8px;
+                border: 1px solid #232d34;
+                color: white !important;
+                -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.2);
+                -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.2);
+                box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.2);
+                transition: all 0.25s;
+            }
+            
+            .side .md ol:nth-of-type(4) li a:hover {
+                color: #E1BB34;
+            }
+            
+            .side .md ol:nth-of-type(4) li a:after {
+                position: absolute;
+                content: "";
+                width: 75px !important;
+                height: 31px;
+                top: 0;
+                right: 0;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                background: url(%%sprite%%) no-repeat;
+                background-position: -0px -0px;
+                padding :0;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#stream"]:after {
+                background-position: 0 0;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#stream"]:before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                background: #d44949;
+                border-radius: 20px;
+                right: 6px;
+                top: 8px;
+                opacity: 1;
+                animation: fade 2s infinite;
+                z-index: 2147483647;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#stream"]:hover:before {
+                animation-play-state: paused;
+            }
+            
+            @keyframes fade {
+                0%,100% { opacity: 0 }
+                50% { opacity: 1 }
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#notice"]:after {
+                background-position: 0 -31px;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#event"]:after {
+                background-position: 0 -62px;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#dxp"]:after {
+                background-position: 0 -93px;
+ 
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#jmod"]:after {
+                background-position: 0 -124px;
+            }
+            
+            .side .md ol:nth-of-type(4) li a[href$="#reset"]:after {
+                background-position: 0 -155px;
+            }
+        }
+        @media all and (max-device-width: 640px) {
+            .side .md ol:nth-of-type(4) {
+                display: none;
+            }
+        }
+
+    /*------------ 2.5 Rules ------------*/
+        .side table:last-of-type {
+            margin: 0;
+        }
+    
+        .side table:last-of-type thead {
+            display: none;
+        }
+
+        .side .md > p:last-of-type {
+            text-align: center;
+        }
+
+        .side table:last-of-type {
+            background-image: url(%%content-repeat%%);
+            color: #e1bb34;
+            border: 1px solid black;
+            list-style-type: none;
+        }
+
+        .side table:last-of-type a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #d7dbe1;
+        }
+
+        .side table:last-of-type a:hover {
+            color: #e1bb34;
+        }
+
+        .side table:last-of-type tbody tr {
+            display: list-item;
+        }
+
+        .side table:last-of-type tbody tr td {
+            display: block;
+            border: none;
+            padding: 0;
+        }
+
+        .side table:last-of-type tbody tr td:first-child {
+            padding: 8px 30px 8px 8px;
+            transition: 200ms;
+            border-top: 1px solid #39444b;
+            border-bottom: 1px solid black;
+            position: relative;
+        }
+        
+        .side table:last-of-type tbody tr td:first-child:after {
+            position: absolute;
+            content: "";
+            height: 7px;
+            width: 15px;
+            right: 5px;
+            top: 50%;
+            margin-top: -4px;
+            background: url(%%sprite%%) no-repeat -285px -177px;
+        }
+
+        .side table:last-of-type tbody tr td:first-child:hover, .side table:last-of-type tbody tr:hover td:first-child {
+            background-color: rgba(0,0,0,0.5); 
+        }
+
+        .side table:last-of-type tbody tr td:last-child {
+            max-height: 0;
+            color: #d7dbe1; 
+            margin: 0px 5px 0px;
+            transition: 300ms ease-in-out;
+            overflow: hidden;
+        }
+
+        .side table:last-of-type tbody tr:hover td:last-child {
+            max-height: 200px;
+            transition: 300ms ease-in-out;
+            margin: 5px 5px 5px;
+        }
+        
+    /*------------ 2.6 Filter List ------------*/
+
+        html:lang(nj) .listing-page .linkflair-ninja, 
+        html:lang(nj) .listing-page .linkflair-suggestion, 
+        html:lang(rl) .listing-page .linkflair-runelab, 
+        html:lang(of) .listing-page .linkflair-runelab, 
+        html:lang(of) .listing-page .linkflair-ninja, 
+        html:lang(of) .listing-page .linkflair-suggestion,
+        html:lang(mt) .listing-page .linkflair-mtx,
+        html:lang(qt) .listing-page .linkflair-humor,
+        html:lang(pi) .listing-page .linkflair-mtx,
+        html:lang(pi) .listing-page .linkflair-humor,
+        html:lang(jm) .listing-page .thing {
+            display: none    }
+
+
+
+        html:lang(jm) .listing-page .linkflair-reply {
+            display: block;
+        }
+            
+    /*------------ 2.7 User Notices ------------*/
+
+        .sidecontentbox a.helplink:hover:before {
+            content: "The /r/runescape moderators are NOT Jagex moderators, we cannot assist you with anything relating to your Jagex account.";
+            display: block;
+            position: absolute;
+            margin-top: -55px;
+            right: 0;
+            padding: 4px;
+            width: 300px;
+            z-index: 1000;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: Arial;
+            font-size: 12px; }
+            
+    /*------------ 2.8 Subscriber Count ------------*/
+
+            .subscribers {
+                display: block;
+                position: relative;
+                float: left;
+                width: 100%;
+                z-index: 1;
+                padding-top: 8px;
+            }
+            
+            .subscribers:after {
+                position: absolute;
+                content: "";
+                width: 340px;
+                height: 65px;
+                right: -20px;
+                top: 6px;
+                background: url(%%sidebar-header%%) no-repeat right,
+                            url(%%content-repeat%%);
+                border-bottom: 1px solid black;
+                z-index: -1;
+                -webkit-box-shadow: inset 5px 0px 10px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: inset 5px 0px 10px 0px rgba(0,0,0,0.75);
+                box-shadow: inset 5px 0px 10px 0px rgba(0,0,0,0.75);
+            }
+            
+            .subscribers:before {
+                content: "";
+                position: absolute;
+                width: 340px;
+                height: 68px;
+                top: 5px;
+                right: -20px;
+                background: rgba(255,255,255,0.15);
+                z-index: -1;
+            }
+            
+            .subscribers .number{
+                font-size: 20px;
+                font-weight: bold;
+                display: block;
+                float: left;
+                width: 100%;
+                padding: 10px 0 0 0;
+                z-index: 120;
+            }
+            
+            .subscribers .word {
+                display: none;   
+            }
+            
+            .subscribers .number:after {
+                text-indent: 0;
+                font-size: 20px;
+                font-variant: small-caps;
+                content: " gielinorians";
+                font-weight: normal;
+            }
+            
+            .users-online {
+                position: relative;
+                display: block;
+                float: right;
+                width: 100%;
+                padding-bottom: 12px;
+                margin-bottom: 15px;
+                z-index: 1;
+            }
+        
+    /*------------ 2.9 Login Form ------------*/
+        .side .login-form {
+            border: 1px solid #355563;
+            background: #010709;
+        }
+        
+        .side .login-form .submit {
+            margin: 4px !important;
+        }
+        
+        .side .login-form #remember-me {
+            padding-left: 8px;
+        }
+    
+        .side .res-sr-style-toggle {
+            display: none;
+        }
+        
+    /*------------ 2.10 Subscribe Buttons ------------*/
+        .side .subButtons {
+            position: relative;
+            margin: 0 auto;
+        }
+    
+        .side .subscribe-button {
+            display: block;
+            margin-right: 0;
+        }
+        
+        .side .subscribe-button .option.active {
+            margin: 0;
+            width: 100%;
+            display: block;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            position: relative;
+            border: 0;
+            margin-bottom: 10px;
+        }
+        
+        /* RES Buttons */
+            .side .subButtons {
+                padding: 0;
+                float: left;
+            }
+            
+            .side .subButtons .subscribe-button {
+                height: 48px;
+                float: left;
+                margin-bottom: 0;
+                margin-right: 5px;
+            }
+        
+            .side .subButtons .subscribe-button a.active {
+                width: 150px;
+                padding: 13px 0;
+                display: block;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                position: relative;
+                border: 0;
+            }
+            
+            .side .subButtons .subscribe-button a.add.active, 
+            .side .subscribe-button .option.add.active  {
+                text-shadow: 1px 1px 1px #187411;
+                background: rgba(114,205,128,1);
+                background: -moz-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -o-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -ms-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: linear-gradient(to bottom, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+            }
+            
+            .side .subButtons .subscribe-button a.remove.active,
+            .side .subscribe-button .option.remove.active {
+                text-shadow: 1px 1px 1px #187411;
+                background: rgba(248,80,50,1);
+                background: -moz-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                opacity: 0.5;
+            }
+            
+            .side .subButtons .subscribe-button a.active:before {
+                position: absolute;
+                width: 152px;
+                height: 48px;
+                content: "";
+                left: -2px;
+                top: -2px;
+                z-index: -1;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+            
+            .side .subscribe-button {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .side .subscribe-button .option.active:before {
+                position: absolute;
+                width: 302px;
+                height: 32px;
+                content: "";
+                left: -2px;
+                top: -2px;
+                border-radius: 5px;
+                border: 1px solid black;
+                z-index: -1;
+            }
+            
+            .side .subButtons .subscribe-button a.add.active:before,
+            .side .subscribe-button .option.add.active:before {
+                background: rgb(114,205,128);
+            }
+            
+            .side .subButtons .subscribe-button a.remove.active:before,
+            .side .subscribe-button .option.remove.active:before {
+                background: rgba(248,80,50,1);
+            }
+            
+            .side .res-fancy-toggle-button {
+                display: block;
+                float: left;
+                margin-right: 0;
+                padding-right: 0;
+                width: 130px;
+                padding: 4px 5px;
+            }
+            
+            .side .RESDashboardToggle,
+            .side .RESshortcutside {
+                position: relative;
+                margin-left: 2px;
+                margin-bottom: 6px;
+                border-radius: 5px;
+                border: 0;
+                text-shadow: 1px 1px 1px #187411;
+                background: rgba(114,205,128,1);
+                background: -moz-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -o-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: -ms-linear-gradient(top, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+                background: linear-gradient(to bottom, rgba(114,205,128,1) 0%, rgba(56,139,47,1) 100%);
+            }
+            
+            .side .RESDashboardToggle:before,
+            .side .RESshortcutside:before {
+                position: absolute;
+                width: 142px;
+                height: 22px;
+                content: "";
+                right: -2px;
+                top: -2px;
+                z-index: -1;
+                border-radius: 5px;
+                border: 1px solid black;
+                background: rgb(114,205,128);
+            }
+            
+            .side .RESDashboardToggle.remove,
+            .side .RESshortcutside.remove {
+                text-shadow: 1px 1px 1px #187411;
+                background: rgba(248,80,50,1);
+                background: -moz-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(231,56,39,1) 100%);
+                opacity: 0.5;
+            }
+            
+            .side .RESDashboardToggle.remove:before,
+            .side .RESshortcutside.remove:before {
+                background: rgba(248,80,50,1);
+            }
+        
+    /*------------ 2.11 Social Links ------------*/
+        @media all and (min-device-width: 640px) {
+            .side .usertext .md ul:nth-of-type(1),
+            .side .usertext .md ul:nth-of-type(2) {
+                list-style: none;
+                margin: 0;
+                padding: 10px;
+                overflow: hidden; 
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li,
+            .side .usertext .md ul:nth-of-type(2) li {
+                background: url(%%sprite%%) no-repeat;
+                background-position: -285px -0px;
+                display: inline-block;
+                width: 50%;
+                float: left;
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(2) {
+                background-position: -424px 0;
+            }
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(3) {
+                background-position: -285px -65px;
+                border-bottom-left-radius: 5px;
+            }
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(4) {
+                background-position: -424px -65px;
+                border-bottom-right-radius: 5px;
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li a,
+            .side .usertext .md ul:nth-of-type(2) li a {
+                background: rgba(0,0,0,0.6);
+                display: block;
+                width: 100%;
+                float:left;
+                text-align: center;
+                padding: 25px 0;
+                transition: all 0.25s ease-in-out;
+                position: relative;
+                font-size: 14px;
+                font-weight: bold;
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li a:hover,
+            .side .usertext .md ul:nth-of-type(2) li a:hover {
+                background: rgba(0,0,0,0.2);   
+                color: #E1BB34;
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(3) a,
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(4) a {
+                text-indent: -9999px;   
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(3) a:after,
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(4) a:after {
+                content: "";
+                position: absolute;
+                margin: auto;
+                top: 0; left: 0; bottom: 0; right: 0;
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(3) a:after {
+                background: url(%%sprite%%) no-repeat center;
+                background-position: -115px -140px;
+                height: 33px;
+                width: 109px
+            }
+            
+            .side .usertext .md ul:nth-of-type(1) li:nth-child(4) a:after {
+                background: url(%%sprite%%) no-repeat center;
+                background-position: -484px -130px;
+                height: 44px;
+                width: 53px
+            }
+            
+             .side .usertext .md ul:nth-of-type(2) li {
+                background: url(%%spritefilter%%) no-repeat;
+            }
+            
+            .side .usertext .md ul:nth-of-type(2) li:nth-child(2) {
+                background-position: -139px 0;
+            }
+            
+            .side .usertext .md ul:nth-of-type(2) li:nth-child(3) {
+                width: 100%;
+                background-position: 0 -65px;
+                
+            }
+            
+            .side .usertext .md ul:nth-of-type(2) li:nth-child(3) a {
+                font-size: 0;
+            }
+            
+            .side .usertext .md ul:nth-of-type(2) li:nth-child(4) {
+                width: 100%;
+                background: none;
+            }
+            
+            .side .usertext .md ul:nth-of-type(2) li:nth-child(4) a {
+                padding: 10px 0;
+            }
+
+        }
+            
+    /*------------ 2.12 Partner Subreddit ------------*/
+        @media all and (min-device-width: 640px) {
+            .side .usertext .md ul:nth-of-type(3) {
+                list-style: none;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li {
+                display: inline-block;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li a {
+                text-indent: -9999px;  
+                height: 70px;
+                width: 70px;
+                display: block;
+                margin-right: 15px;
+                background: url(%%sprite%%) no-repeat;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li:last-of-type a {
+                margin-right: 0;   
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li a[href$="/r/2007scape"] {
+                background-position: -145px -0px;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3)li a[href$="/r/2007scape"]:hover {
+                background-position: -145px -70px;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li a[href$="/r/RSChronicle"] {
+                background-position: -75px -0px;
+            }
+            
+            .side .usertext .md ul:nth-of-type(3) li a[href$="/r/RSChronicle"]:hover {
+                background-position: -75px -70px;
+            }
+            
+        }
+        
+    /*------------ 2.13 BTS Preview ------------*/
+        .side .usertext .md a[href$="#video"] {
+            position: absolute;
+            top: -185px;
+            right: 80px;
+            width: 262px;
+            height: 171px;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 100;
+            background-image: url(%%april%%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: background-image 1s linear;
+        }
+
+        /*.side .usertext .md a[href$="#video"]:hover {
+            background-image: url(%%monthahead-march2%%);
+        }*/
+
+        @media screen and (max-width: 1442px){
+            .side .usertext .md a[href$="#video"] {
+                width: 210px;
+                height: 130px;
+            }
+        }
+
+        
+/*------------ 3.0 Content ------------*/
+    /*------------ 3.1 Body ------------*/
+        .content {
+            padding-top: 4px;
+            overflow: hidden;
+            margin: 5px 10px;
+        }
+
+        div[id*="_main_top"],
+        div[id*="ad_main"] {
+            padding-bottom:15px;
+        }
+
+        div[id*="_main_top"]:after,
+        div[id*="ad_main"]:after,
+        div[id*="ad_"]:after {
+            content: "advertisement";
+            text-align: center;
+            display: block;
+        }
+
+        div[class^="organic-list"] .flat-list:after {
+            content: "This advertisement is not controlled by /r/runescape";
+            padding: 2px 5px;
+            color: #bababa;
+            display: block;
+        }
+
+        .arrow { width:20px;height:20px;}
+        .arrow.up{background: transparent url(%%sprite%%) no-repeat -75px -140px; }
+        .arrow.down{background: transparent url(%%sprite%%) no-repeat -75px -160px;}
+        .arrow.upmod{background: transparent url(%%sprite%%) no-repeat -95px -140px;}
+        .arrow.downmod{background: transparent url(%%sprite%%) no-repeat -95px -160px;}
+        .comment .midcol, .gadget .midcol {width:20px;margin-right:5px;}
+
+        .res-nightmode .arrow { height: 14px; width: 15px; }
+
+        .entry .flat-list .report-button a,
+        .res-nightmode .entry .flat-list .report-button a {
+            color: #b20000;
+        }
+        
+        .sheets, ul#image-preview-list, .wiki-page-content {
+            margin-right: 0 !important;
+        }
+        
+        .commentarea .sitetable .entry {
+            overflow: visible;
+        }
+        
+        .commentarea .sitetable .entry .usertext, .commentarea .sitetable .entry .buttons {
+            margin-left: 24px !important;
+        }
+        
+        .comment .tagline {
+            display: block !important;
+            padding: 2px 0 2px 22px;
+        }
+
+        /*------------ 3.1.1 Submission Page ------------*/ 
+
+            /* TO REDO */
+
+        /*------------ 3.1.2 Post Page ------------*/   
+            .commentarea > div.sitetable:before {
+                content: "Please do not downvote comments based on personal opinion. Remember to follow Reddiquette when voting on comments/posts.";
+                display: block;
+                margin: 0px 315px 10px 10px;
+                background-color: #FFFFDC;
+                padding: 8px;
+                font-size: 13px;
+                border: 1px solid #C8C864;
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px
+            }
+
+        /*------------ 3.1.3 Filters ------------*/ 
+            html:lang(re) .link:not(.linkflair-ninja) {
+                display: none    
+            }
+
+            html:lang(of) .listing-page .linkflair-ninja{
+                display: none   
+            }
+
+        /*------------ 3.1.4 Upvote XP ------------*/   
+            .thing .upmod:focus::after
+            {
+                content:"";
+                font-size: 10px;
+                font-family: Trajan Pro, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+                color: orange;
+                text-shadow: 1px 1px 1px black,
+                        -1px 1px 1px black,
+                        -1px -1px 1px black,
+                         1px -1px 1px black,
+                         0px 0px 3px black;
+                display:block;
+                position: absolute;
+                animation: upvote 1.5s ease-out;
+                -webkit-animation: upvote 2s ease-out;
+                opacity:0;
+                z-index:9001;
+            }
+            @keyframes upvote 
+            {
+                0% {margin-top:22px;opacity:1;}
+                25%{opacity:1;}
+                100% {margin-top:-80px;opacity:0;}
+            }
+            @-webkit-keyframes upvote 
+            {
+                0% {margin-top:22px;opacity:1;}
+                25%{opacity:1;}
+                100% {margin-top:-80px;opacity:0;}
+            }
+
+            .thing[data-fullname$="a"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="b"] .upmod:focus::after { content: "+23 XP"; }
+            .thing[data-fullname$="c"] .upmod:focus::after { content: "+5 XP"; }
+            .thing[data-fullname$="d"] .upmod:focus::after { content: "+6 XP"; }
+            .thing[data-fullname$="e"] .upmod:focus::after { content: "Miss"; }
+            .thing[data-fullname$="f"] .upmod:focus::after { content: "+57 XP"; }
+            .thing[data-fullname$="g"] .upmod:focus::after { content: "+120 XP"; }
+            .thing[data-fullname$="h"] .upmod:focus::after { content: "+99 XP"; }
+            .thing[data-fullname$="i"] .upmod:focus::after { content: "+9001 XP"; }
+            .thing[data-fullname$="j"] .upmod:focus::after { content: "Lots!"; }
+            .thing[data-fullname$="k"] .upmod:focus::after { content: "+69 XP"; }
+            .thing[data-fullname$="l"] .upmod:focus::after { content: "hunter2"; }
+            .thing[data-fullname$="m"] .upmod:focus::after { content: "Basically Zezima"; }
+            .thing[data-fullname$="n"] .upmod:focus::after { content: "Party!"; }
+            .thing[data-fullname$="o"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="p"] .upmod:focus::after { content: "Say that to my main"; }
+            .thing[data-fullname$="q"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="r"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="s"] .upmod:focus::after { content: "Nothing interesting happens"; }
+            .thing[data-fullname$="t"] .upmod:focus::after { content: "All I got was this silly hat"; }
+            .thing[data-fullname$="u"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="v"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="w"] .upmod:focus::after { content: "Eugh, cabbage"; }
+            .thing[data-fullname$="x"] .upmod:focus::after { content: "Doubling money"; }
+            .thing[data-fullname$="y"] .upmod:focus::after { content: "+295 XP"; }
+            .thing[data-fullname$="z"] .upmod:focus::after { content: "Stamp please"; }
+            .thing[data-fullname$="1"] .upmod:focus::after { content: "share I tb'd"; }
+            .thing[data-fullname$="2"] .upmod:focus::after { content: "Dancing for GP"; }
+            .thing[data-fullname$="3"] .upmod:focus::after { content: "Buying gf"; }
+            .thing[data-fullname$="4"] .upmod:focus::after { content: "+1 XP"; }
+            .thing[data-fullname$="5"] .upmod:focus::after { content: "+348 XP"; }
+            .thing[data-fullname$="6"] .upmod:focus::after { content: "+279 XP"; }
+            .thing[data-fullname$="7"] .upmod:focus::after { content: "Trouble Brewing anyone?"; }
+            .thing[data-fullname$="8"] .upmod:focus::after { content: "I'm back, what's changed?"; }
+            .thing[data-fullname$="9"] .upmod:focus::after { content: "+200M XP"; }
+            .thing[data-fullname$="0"] .upmod:focus::after { content: "+10 XP"; }
+
+            .submit_text span .md p{
+            color: white !important;
+            }
+
+    /*------------ 3.2 Footer ------------*/
+        .footer {
+            margin:0 auto;
+        }
+
+        .footer-parent {
+            background: url(%%lolshauny%%) no-repeat bottom center;
+            /*background-size: 355px 500px;
+            height: 690px;*/
+            height: 600px;
+            padding-top: 0;
+            clear: both;
+            text-align: center;
+            width: 100%;
+            margin-bottom: -1px;
+            opacity: 0.8;
+        }
+
+        /*.footer-parent:hover {
+            background: url(%%timbo-2%%) no-repeat bottom center;
+            background-size: 355px 500px;
+        }*/
+
+/*------------ 4.0 Flairs ------------*/
+
+    /* Hide Mod Bot
+    .sidecontentbox:not([id="moderation_tools"]):not([id="wikiactions"]) li:nth-of-type(3) {display:none;}  */
+
+    span[class*="flair-skill-"],
+    span[class*="flair-profession-"],
+    span[class*="flair-faction-"],  
+    span[class*="flair-rare-"], 
+    span[class*="flair-other-"],
+    span[class*="flair-flair"],
+    span[class*="flair-user-"],
+    span[class*="flair-two-"],
+    span[class*="flair-mod-"]    
+    {
+        padding: 0px 2px 0px 2px;
+        border: 1px solid gray;
+        border-radius: 0px;
+        font-weight: bold;
+        font-size: x-small;
+    }
+    span[class*="flair-skill-"]:before,
+    span[class*="flair-profession-"]:before,
+    span[class*="flair-faction-"]:before,  
+    span[class*="flair-rare-"]:before, 
+    span[class*="flair-other-"]:before,
+    span[class*="flair-user-"]:before,
+    span[class*="flair-two-"]:before,
+    span[class*="flair-mod-"]:before 
+    { 
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: -8px 1px;
+        padding: 0px 0px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+    .flair:after { display:none; }
+    span[class~="flair-flair"]:before {display:none;}
+    span[class~="flair-flair"]:after { content: "Plain"; }
+
+    /*------------ 4.1 User Flairs ------------*/
+        .flairoptionpane li {margin: 8px;}
+        .sidecontentbox .content li {margin: 7px 0px;}
+        .flairoptionpane .flair:after { display: inline; }
+
+        /*------------ 4.1.1 Skills ------------*/
+            span[class*="flair-skill-"]:before { background-image: url(%%flairs%%); }
+
+            .flair-skill-agility:before { background-position: -48px -0px; }        .flair-skill-agility:after { content: "Agility"; }
+            .flair-skill-attack:before { background-position: -48px -24px; }        .flair-skill-attack:after { content: "Attack"; }
+            .flair-skill-construction:before { background-position: -48px -48px; }  .flair-skill-construction:after { content: "Construction"; }
+            .flair-skill-cooking:before { background-position: -48px -72px; }       .flair-skill-cooking:after { content: "Cooking"; }
+            .flair-skill-crafting:before { background-position: -48px -96px; }  .flair-skill-crafting:after { content: "Crafting"; }
+            .flair-skill-defence:before { background-position: -48px -120px; }  .flair-skill-defence:after { content: "Defence"; }
+            .flair-skill-dungeoneering:before { background-position: -48px -144px; }    .flair-skill-dungeoneering:after { content: "Dungeoneering"; }
+            .flair-skill-farming:before { background-position: -48px -168px; }  .flair-skill-farming:after { content: "Farming"; }
+            .flair-skill-firemaking:before { background-position: -48px -192px; }   .flair-skill-firemaking:after { content: "Firemaking"; }
+            .flair-skill-fishing:before { background-position: -48px -216px; }  .flair-skill-fishing:after { content: "Fishing"; }
+            .flair-skill-fletching:before { background-position: -48px -240px; }    .flair-skill-fletching:after { content: "Fletching"; }
+            .flair-skill-herblore:before { background-position: -48px -264px; } .flair-skill-herblore:after { content: "Herblore"; }
+            .flair-skill-hitpoints:before { background-position: -48px -288px; }    .flair-skill-hitpoints:after { content: "Hitpoints"; }
+            .flair-skill-hunter:before { background-position: -48px -312px; }       .flair-skill-hunter:after { content: "Hunter"; }
+            .flair-skill-magic:before { background-position: -48px -336px; }        .flair-skill-magic:after { content: "Magic"; }
+            .flair-skill-mining:before { background-position: -48px -360px; }       .flair-skill-mining:after { content: "Mining"; }
+            .flair-skill-prayer:before { background-position: -48px -384px; }       .flair-skill-prayer:after { content: "Prayer"; }
+            .flair-skill-range:before { background-position: -48px -408px; }        .flair-skill-range:after { content: "Range"; }
+            .flair-skill-runecrafting:before { background-position: -48px -432px; } .flair-skill-runecrafting:after { content: "Runecrafting"; }
+            .flair-skill-slayer:before { background-position: -48px -456px; }       .flair-skill-slayer:after { content: "Slayer"; }
+            .flair-skill-smithing:before { background-position: -48px -480px; } .flair-skill-smithing:after { content: "Smithing"; }
+            .flair-skill-strength:before { background-position: -48px -504px; } .flair-skill-strength:after { content: "Strength"; }
+            .flair-skill-summoning:before { background-position: -48px -528px; }    .flair-skill-summoning:after { content: "Summoning"; }
+            .flair-skill-thieving:before { background-position: -48px -552px; } .flair-skill-thieving:after { content: "Thieving"; }
+            .flair-skill-woodcutting:before { background-position: -48px -576px; }  .flair-skill-woodcutting:after { content: "Woodcutting"; }
+            .flair-skill-divination:before { background-position: -48px -600px; }   .flair-skill-divination:after { content: "Divination"; }
+            .flair-skill-quest:before { background-position: -48px -624px; }    .flair-skill-quest:after { content: "Quests"; }
+            .flair-skill-invention:before { background-position: -48px -648px; }    .flair-skill-invention:after { content: "Invention"; }
+
+        /*------------ 4.1.2 Professions ------------*/
+            span[class*="flair-profession-"]:before { background-image: url(%%flairs%%); }
+
+            .flair-profession-artisan:before { background-position: -144px -0px; }  .flair-profession-artisan:after { content: "Artisan"; }
+            .flair-profession-combat:before { background-position: -144px -24px; }  .flair-profession-combat:after { content: "Combat"; }
+            .flair-profession-gather:before { background-position: -144px -48px; }  .flair-profession-gather:after { content: "Gather"; }
+            .flair-profession-support:before { background-position: -144px -72px; } .flair-profession-support:after { content: "Support"; }
+            .flair-profession-member:before { background-position: -144px -96px; }  .flair-profession-member:after { content: "Member"; }
+            .flair-profession-star:before { background-position: -144px -120px; }   .flair-profession-star:after { content: "Star"; }
+            
+        /*------------ 4.1.3 Factions ------------*/
+            span[class*="flair-faction-"]:before { background-image: url(%%flairs%%); }
+
+            .flair-faction-armadyl:before { background-position: -96px -0px; }  .flair-faction-armadyl:after { content: "Armadyl"; }
+            .flair-faction-bandos:before { background-position: -96px -24px; }  .flair-faction-bandos:after { content: "Bandos"; }
+            .flair-faction-godless:before { background-position: -96px -48px; } .flair-faction-godless:after { content: "Godless"; }
+            .flair-faction-guthix:before { background-position: -96px -72px; }  .flair-faction-guthix:after { content: "Guthix"; }
+            .flair-faction-saradomin:before { background-position: -96px -96px; }   .flair-faction-saradomin:after { content: "Saradomin"; }
+            .flair-faction-seren:before { background-position: -96px -120px; }  .flair-faction-seren:after { content: "Seren"; }
+            .flair-faction-sliske:before { background-position: -96px -144px; } .flair-faction-sliske:after { content: "Sliske"; }
+            .flair-faction-zamorak:before { background-position: -96px -168px; }    .flair-faction-zamorak:after { content: "Zamorak"; }
+            .flair-faction-zaros:before { background-position: -96px -192px; }  .flair-faction-zaros:after { content: "Zaros"; }
+            .flair-faction-brassica:before { background-position: -96px -216px; }   .flair-faction-brassica:after { content: "Brassica Prime"; }
+            .flair-faction-marimbo:before { background-position: -96px -240px; }    .flair-faction-marimbo:after { content: "Marimbo"; }
+            .flair-faction-V:before { background-position: -96px -264px; }  .flair-faction-V:after { content: "V"; }
+
+            .flair-faction-armadyl { color: #0073e5; }  .flair-faction-armadyl:after { color: #0073e5; }   
+            .flair-faction-bandos { color: #6c4824; }   .flair-faction-bandos:after { color: #6c4824; }
+            .flair-faction-godless { color: #e57100; }  .flair-faction-godless:after { color: #e57100; }
+            .flair-faction-guthix { color: #009960; }   .flair-faction-guthix:after { color: #009960; }
+            .flair-faction-saradomin { color: #e5bb00; }    .flair-faction-saradomin:after { color: #e5bb00; }
+            .flair-faction-seren { color: #00e1e1; }    .flair-faction-seren:after { color: #00e1e1; }
+            .flair-faction-sliske { color: #00c000; }   .flair-faction-sliske:after { color: #00c000; }
+            .flair-faction-zamorak { color: #e50000; }  .flair-faction-zamorak:after { color: #e50000; }
+            .flair-faction-zaros { color: #5e3886; }    .flair-faction-zaros:after { color: #5e3886; }
+            .flair-faction-brassica { color: #088e45; } .flair-faction-brassica:after { color: #088e45; }
+            .flair-faction-marimbo { color: #f04f2b; }  .flair-faction-marimbo:after { color: #f04f2b; }
+            .flair-faction-V { color: #d38b20; }    .flair-faction-V:after { color: #d38b20; }
+
+        /*------------ 4.1.4 Rares ------------*/
+            span[class*="flair-rare-"]:before { background-image: url(%%flairs%%); }
+            
+            .flair-rare-whitehat:before { background-position: -24px -0px; }            .flair-rare-whitehat:after { content: "Party!"; }
+            .flair-rare-redhat:before { background-position: -24px -24px; }         .flair-rare-redhat:after { content: "Party!"; }
+            .flair-rare-yellowhat:before { background-position: -24px -48px; }      .flair-rare-yellowhat:after { content: "Party!"; }
+            .flair-rare-greenhat:before { background-position: -24px -72px; }           .flair-rare-greenhat:after { content: "Party!"; }
+            .flair-rare-bluehat:before { background-position: -24px -96px; }            .flair-rare-bluehat:after { content: "Party!"; }
+            .flair-rare-purplehat:before { background-position: -24px -120px; }     .flair-rare-purplehat:after { content: "Party!"; }
+
+            .flair-rare-ccracker:before { background-position: -24px -144px; }      .flair-rare-ccracker:after { content: "I wonder what's inside?"; }
+            .flair-rare-gcracker:before { background-position: -24px -168px; }      .flair-rare-gcracker:after { content: "It's a hammer"; }
+            .flair-rare-mcracker:before { background-position: -24px -192px; }      .flair-rare-mcracker:after { content: "It's free XP"; }
+
+            .flair-rare-redmask:before { background-position: -24px -216px; }           .flair-rare-redmask:after { content: "Boo!"; }
+            .flair-rare-greenmask:before { background-position: -24px -240px; }     .flair-rare-greenmask:after { content: "Boo!"; }
+            .flair-rare-bluemask:before { background-position: -24px -264px; }      .flair-rare-bluemask:after { content: "Boo!"; }
+
+            .flair-rare-santa:before { background-position: -24px -288px; }         .flair-rare-santa:after { content: "Happy Holidays"; }
+            .flair-rare-blacksanta:before { background-position: -24px -312px; }        .flair-rare-blacksanta:after { content: "Exclusive Model only 19.99"; }
+
+            .flair-rare-pumpkin:before { background-position: -24px -336px; }           .flair-rare-pumpkin:after { content: "Pumpkin"; }
+            .flair-rare-eek:before { background-position: -24px -360px; }           .flair-rare-eek:after { content: "eek!"; }
+            .flair-rare-yoyo:before { background-position: -24px -384px; }          .flair-rare-yoyo:after { content: "Comes right around"; }
+            .flair-rare-sythe:before { background-position: -24px -408px; }         .flair-rare-sythe:after { content: "Sythe"; }
+            .flair-rare-chicken:before { background-position: -24px -432px; }           .flair-rare-chicken:after { content: "Rubber Chicken"; }
+            .flair-rare-brooch:before { background-position: -24px -456px; }            .flair-rare-brooch:after { content: "Bone Brooch"; }
+
+            .flair-rare-ecto:before { background-position: -24px -480px; }          .flair-rare-ecto:after { content: "Ectoplasmator"; }
+            .flair-rare-mackers:before { background-position: -24px -504px; }           .flair-rare-mackers:after { content: "Gobble Gobble"; }
+            .flair-rare-beard:before { background-position: -24px -528px; }         .flair-rare-beard:after { content: "Ho Ho Ho!"; }
+            .flair-rare-egg:before { background-position: -24px -552px; }           .flair-rare-egg:after { content: "Wait, this isn't chocolate..."; }
+            .flair-rare-cegg:before { background-position: -24px -576px; }          .flair-rare-cegg:after { content: "Mmm, Chocolate"; }
+            .flair-rare-eegg:before { background-position: -24px -600px; }          .flair-rare-eegg:after { content: "Ohh, How Colorful"; }
+            .flair-rare-ring:before { background-position: -24px -624px; }          .flair-rare-ring:after { content: "There and back again"; }
+            .flair-rare-bunny:before { background-position: -24px -648px; }         .flair-rare-bunny:after { content: "Hippity Hoppity"; }
+        
+        /*------------ 4.1.5 Others ------------*/
+            span[class*="flair-other-"]:before { background-image: url(%%flairs%%); }
+
+            .flair-other-quest:before { background-position: 0px -0px; }        .flair-other-quest:after { content: "Quest"; }
+            .flair-other-distraction:before { background-position: 0px -24px; } .flair-other-distraction:after { content: "Distraction"; }
+            .flair-other-minigame:before { background-position: 0px -48px; }    .flair-other-minigame:after { content: "Minigame"; }
+            .flair-other-skill:before { background-position: 0px -72px; }       .flair-other-skill:after { content: "Skill"; }
+
+            .flair-other-swords:before { background-position: 0px -96px; }      .flair-other-swords:after { content: "Swords"; }
+            .flair-other-flags:before { background-position: 0px -120px; }      .flair-other-flags:after { content: "Flags"; }
+            .flair-other-music:before { background-position: 0px -144px; }      .flair-other-music:after { content: "Music"; }
+            .flair-other-staff:before { background-position: 0px -168px; }      .flair-other-staff:after { content: "Staff"; }
+            .flair-other-helm:before { background-position: 0px -192px; }       .flair-other-helm:after { content: "Helm"; }
+            .flair-other-chef:before { background-position: 0px -216px; }       .flair-other-chef:after { content: "Chef"; }
+            .flair-other-cake:before { background-position: 0px -240px; }       .flair-other-cake:after { content: "Cake"; }
+
+            .flair-other-task:before { background-position: 0px -264px; }       .flair-other-task:after { content: "Task"; }
+            .flair-other-kendal:before { background-position: 0px -288px; }     .flair-other-kendal:after { content: "The Kendal"; }
+
+            .flair-other-bot:before { background-position: 0px -312px; }        .flair-other-bot:after { content: "Botwatch"; }
+
+            .flair-other-chimes:before { background-position: 0px -336px; }     .flair-other-chimes:after { content: "Chimes"; }
+            .flair-other-bamboo:before { background-position: 0px -360px; }     .flair-other-bamboo:after { content: "Bamboo"; }
+            .flair-other-gunpowder:before { background-position: 0px -384px; }  .flair-other-gunpowder:after { content: "Gunpowder"; }
+            .flair-other-slate:before { background-position: 0px -408px; }      .flair-other-slate:after { content: "Black Slate"; }
+            .flair-other-cherrywood:before { background-position: 0px -432px; } .flair-other-cherrywood:after { content: "Cherrywood"; }
+            .flair-other-jade:before { background-position: 0px -456px; }       .flair-other-jade:after { content: "Jade"; }
+            .flair-other-steel:before { background-position: 0px -480px; }      .flair-other-steel:after { content: "Stainless Steel"; }
+            .flair-other-ancientbones:before { background-position: 0px -504px; }   .flair-other-ancientbones:after { content: "Ancient Bones"; }
+            .flair-other-plate:before { background-position: 0px -528px; }      .flair-other-plate:after { content: "Plate"; }
+            .flair-other-lacquer:before { background-position: 0px -552px; }    .flair-other-lacquer:after { content: "Lacquer"; }
+            .flair-other-chi:before { background-position: 0px -576px; }        .flair-other-chi:after { content: "Chi"; }
+            .flair-other-spices:before { background-position: 0px -600px; }     .flair-other-spices:after { content: "Spices"; }
+            .flair-other-gold:before { background-position: 0px -624px; }       .flair-other-gold:after {content: "Gold Pieces"; }
+            .flair-other-mile10:before { background-position: 0px -648px; }     .flair-other-mile10:after {content: "Level 10 Milestone"; }
+            .flair-other-mile20:before { background-position: 0px -672px; }     .flair-other-mile20:after {content: "Level 20 Milestone"; }
+            .flair-other-mile30:before { background-position: 0px -696px; }     .flair-other-mile30:after {content: "Level 30 Milestone"; }
+            .flair-other-mile40:before { background-position: 0px -720px; }     .flair-other-mile40:after {content: "Level 40 Milestone"; }
+            .flair-other-mile50:before { background-position: 0px -744px; }     .flair-other-mile50:after {content: "Level 50 Milestone"; }
+            .flair-other-mile60:before { background-position: 0px -768px; }     .flair-other-mile60:after {content: "Level 60 Milestone"; }
+            .flair-other-mile70:before { background-position: 0px -792px; }     .flair-other-mile70:after {content: "Level 70 Milestone"; }
+            .flair-other-mile80:before { background-position: 0px -816px; }     .flair-other-mile80:after {content: "Level 80 Milestone"; }
+            .flair-other-mile90:before { background-position: 0px -840px; }     .flair-other-mile90:after {content: "Level 90 Milestone"; }
+            .flair-other-max:before { background-position: 0px -864px; }        .flair-other-max::after {content: "Maxed";}
+            .flair-other-comp:before { background-position: 0px -888px; }       .flair-other-comp::after {content: "Completionist";}
+            .flair-other-tcomp:before { background-position: 0px -912px; }      .flair-other-tcomp {color: #BD1313; text-shadow: 0px 3px 5px #FFE100; }
+            .flair-other-sailing:before { background-position: 0px -936px; }    .flair-other-sailing:after {content: "Ahoy!"; }
+            .flair-other-cabbage:before { background-position: 0px -960px; }    .flair-other-cabbage:after {content: "My Cabbages!"; }
+            .flair-other-ironman:before { background-position: -72px -288px; }    .flair-other-ironman:after { content: "Ironman"; }
+            .flair-other-hardcore:before { background-position: -72px -312px; }       .flair-other-hardcore:after { content: "Hardcore Ironman"; }
+            .flair-other-bronzecabbage:before { background-position: 0px -984px; }
+            .flair-other-silvercabbage:before { background-position: 0px -1008px; }
+            .flair-other-goldcabbage:before { background-position: 0px -1032px; }
+            .flair-other-terracotta:before { background-position: 0px -1056px; }    .flair-other-terracotta:after { content: "Terracotta"; }
+            .flair-other-azure:before { background-position: 0px -1080px; }     .flair-other-azure:after { content: "Azure"; }
+            .flair-other-dominion:before { background-position: 0px -1104px; }  .flair-other-dominion:after { content: "Boss Slayer"; }
+            .flair-other-crucible:before { background-position: 0px -1128px; }  .flair-other-crucible:after { content: "Bounty Hunter"; }
+            .flair-other-tok:before { background-position: 0px -1152px; }           .flair-other-tok:after {color: #bd421b;}
+        
+    /*------------ 4.2 Mod Flairs ------------*/
+        span[class*="flair-mod-"]:before { background-image: url(%%flairs%%); }
+
+        .flair-mod-jagex:before { background-position: -120px 0px; }
+        .flair-mod-jagex {  color: yellow;
+                    border-color: yellow;
+                    background: -webkit-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -moz-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -ms-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -o-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: linear-gradient(top, goldenrod, darkgoldenrod);
+                 }
+                 
+        .flair-mod-jagex-support:before { background-position: -120px 0px; }
+        .flair-mod-jagex-support {  color: yellow;
+                    border-color: yellow;
+                    background: -webkit-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -moz-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -ms-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: -o-linear-gradient(top, goldenrod, darkgoldenrod);
+                    background: linear-gradient(top, goldenrod, darkgoldenrod);
+                 }
+
+        .flair-mod-player:before { background-position: -120px -24px; }
+        .flair-mod-player { color: white;
+                    background: -webkit-linear-gradient(top, lightgrey, darkgrey);
+                    background: -moz-linear-gradient(top, lightgrey, darkgrey);
+                    background: -ms-linear-gradient(top, lightgrey, darkgrey);
+                    background: -o-linear-gradient(top, lightgrey, darkgrey);
+                    background: linear-gradient(top, lightgrey, darkgrey);
+                 }
+        .flair-mod-forum:before { background-position: -120px -48px  !important; }
+        .flair-mod-forum {  color: white;
+                    border-color: green;
+                    background: -webkit-linear-gradient(top, limegreen, darkgreen);
+                    background: -moz-linear-gradient(top, limegreen, darkgreen);
+                    background: -ms-linear-gradient(top, limegreen, darkgreen);
+                    background: -o-linear-gradient(top, limegreen, darkgreen);
+                    background: linear-gradient(top, limegreen, darkgreen);
+                 }
+        .flair-mod-local:before { background-position: -120px -72px; }
+        .flair-mod-local {  color: white;
+                    border-color: purple;
+                    background: -webkit-linear-gradient(top, lightslateblue, darkslateblue);
+                    background: -moz-linear-gradient(top, lightslateblue, darkslateblue);
+                    background: -ms-linear-gradient(top, lightslateblue, darkslateblue);
+                    background: -o-linear-gradient(top, lightslateblue, darkslateblue);
+                    background: linear-gradient(top, lightslateblue, darkslateblue);
+                 }
+        .flair-mod-reddit:before { background-position: -120px -96px !important; }
+        .flair-mod-reddit { color: white !important;;
+                    border-color: red !important;;
+                    background: -webkit-linear-gradient(top, tomato, maroon) !important;;
+                    background: -moz-linear-gradient(top, tomato, maroon) !important;;
+                    background: -ms-linear-gradient(top, tomato, maroon) !important;;
+                    background: -o-linear-gradient(top, tomato, maroon) !important;;
+                    background: linear-gradient(top, tomato, maroon) !important;;
+                 }
+        .flair-mod-build:before { background-position: -120px -120px; }
+        .flair-mod-build {  color: white;
+                    border-color: blue;
+                    background: -webkit-linear-gradient(top, cornflowerblue, darkblue);
+                    background: -moz-linear-gradient(top, cornflowerblue, darkblue);
+                    background: -ms-linear-gradient(top, cornflowerblue, darkblue);
+                    background: -o-linear-gradient(top, cornflowerblue, darkblue);
+                    background: linear-gradient(top, cornflowerblue, darkblue);
+                 }
+        
+        /*------------ 4.2.1 Moderator Distinguished ------------*/
+            .thing .tagline .author.moderator ~ .flair { display: none; }
+            .thing .tagline .author.moderator { 
+                color: white;
+                border: 1px solid gray;
+                border-radius: 0px !important;
+                background: -webkit-linear-gradient(top, limegreen, darkgreen);
+                background: -moz-linear-gradient(top, limegreen, darkgreen);
+                background: -ms-linear-gradient(top, limegreen, darkgreen);
+                background: -o-linear-gradient(top, limegreen, darkgreen);
+                background: linear-gradient(top, limegreen, darkgreen);
+            }
+            .tagline a.moderator ~ .userattrs .moderator { font-size: 0px; }
+            .tagline a.moderator ~ .userattrs .moderator::after {
+                content: "";
+                position: relative;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin: -8px -0px;
+                background: transparent url(%%flairs%%) no-repeat -120px -48px;
+            }
+
+    /*------------ 4.3 Custom User Flairs ------------*/
+            span[class*="flair-user-"]:before { background-image: url(%%flairs%%); }
+
+            .flair-user-runefestirl:before { background-position: -72px 0px; }
+            .flair-user-runefestnonirl:before { background-position: -72px -24px; }
+            .flair-user-verified:before { background-position: -72px -48px; }
+            .flair-user-runefestirl {
+            background: #f0f9ff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); /* FF3.6+ */
+            background: -o-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* W3C */
+            color: white;
+            text-shadow: 0px 0px 5px #002229;
+            }
+            .flair-user-runefestirl2017:before, .flair-user-runefest2017:before  { padding-right: 4px !important; background-position: -71px -360px; width: 26px; height: 26px; margin: -8px -1px; }
+            .flair-user-runefestirl2017 {
+                padding: 0px 6px 0px 2px !important;
+                background-image: linear-gradient(175deg, #4ac425 0%, #e7bd61 60%, #e7bd61  100%);
+                -webkit-box-shadow: inset 0px 0px 3px 0px rgba(74,196,37,0.8);
+                -moz-box-shadow: inset 0px 0px 3px 0px rgba(74,196,37,0.8);
+                box-shadow: inset 0px 0px 3px 0px rgba(74,196,37,0.8);
+                color: white;
+                text-shadow: 0px 0px 5px #002229;
+            }
+            .flair-user-verified { background: #9dd53a; /* Old browsers */
+            background: -moz-linear-gradient(top,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
+            background: -webkit-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C */
+            color: #073802; }
+            .flair-user-2014-best-submission:before,
+            .flair-user-2014-best-comment:before,
+            .flair-user-2014-best-achievement:before,
+            .flair-user-2014-best-helping:before,
+            .flair-user-2014-best-suggestion:before
+            { background-position: -72px -72px }            
+            .flair-user-2014-best-submission,
+            .flair-user-2014-best-comment,
+            .flair-user-2014-best-achievement,
+            .flair-user-2014-best-helping,
+            .flair-user-2014-best-suggestion 
+            {
+                background: #d2bd7b;
+                background: -moz-linear-gradient(top,  #d2bd7b 0%, #87661b 56%, #67521a 100%);
+                background: -webkit-linear-gradient(top,  #d2bd7b 0%,#87661b 56%,#67521a 100%);
+                background: -o-linear-gradient(top,  #d2bd7b 0%,#87661b 56%,#67521a 100%);
+                background: -ms-linear-gradient(top,  #d2bd7b 0%,#87661b 56%,#67521a 100%);
+                background: linear-gradient(to bottom,  #d2bd7b 0%,#87661b 56%,#67521a 100%);
+                border: 1px solid #c3a755;
+                color: #d3b65c;
+                text-shadow: 0px 0px 5px #3a2f0d;
+            }
+            .flair-user-tuska:before {background-position: -72px -96px} .flair-user-tuska:after {content: "Tuska"}
+            .flair-user-tuska-bronze:before {
+                background-position: -72px -120px
+            }
+            .flair-user-tuska-silver:before {
+                background-position: -72px -144px
+            }
+            .flair-user-tuska-gold:before {
+                background-position: -72px -168px
+            }
+            .flair-user-inventiongold:before,
+            .flair-user-inventionsilver:before,
+            .flair-user-inventionbronze:before
+            { background-position: -48px -648px; }
+            .flair-user-inventiongold
+            {
+                background: #EFD071;
+                background: -moz-linear-gradient(to bottom,  #E2D8B7 0%,#EFD071 56%,#F3C318 100%);
+                background: -webkit-linear-gradient(to bottom,  #E2D8B7 0%,#EFD071 56%,#F3C318 100%);
+                background: -o-linear-gradient(to bottom,  #E2D8B7 0%,#EFD071 56%,#F3C318 100%);
+                background: -ms-linear-gradient(to bottom,  #E2D8B7 0%,#EFD071 56%,#F3C318 100%);
+                background: linear-gradient(to bottom,  #E2D8B7 0%,#EFD071 56%,#F3C318 100%);
+                border: 1px solid #c3a755;
+                color: #F7CF52;
+                text-shadow: 0px 0px 5px #3a2f0d;
+                }
+            .flair-user-inventionsilver
+            {
+                background: #CCCCCC;
+                background: -moz-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -webkit-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -o-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -ms-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                border: 1px solid #c3a755;
+                color: #F7F7F7;
+                text-shadow: 0px 0px 5px #3a2f0d;
+                }
+            .flair-user-inventionbronze
+            {
+                background: #9E7E17;
+                background: -moz-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -webkit-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -o-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -ms-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                border: 1px solid #c3a755;
+                color: #CCB593;
+                text-shadow: 0px 0px 4px #000000;
+            }
+            .flair-user-dxpgold:after {
+                content: " - 09/2016 DXP Competition Winner";
+                display: none;
+            }
+            .flair-user-dxpsilver:after {
+                content: " - 09/2016 DXP Competition 2nd Place";
+                display: none;
+            }
+            .flair-user-dxpbronze:after {
+                content: " - 09/2016 DXP Competition 3rd Place";
+                display: none;
+            }
+            .flair-user-dxptop30:after {
+                content: " - 09/2016 DXP Competition Top 30";
+                display: none;
+            }
+
+            .flair-user-dxpgold-feb2017:after {
+                content: " - 02/2017 DXP Competition Winner";
+                display: none;
+            }
+            .flair-user-dxpsilver-feb2017:after {
+                content: " - 02/2017 DXP Competition 2nd Place";
+                display: none;
+            }
+            .flair-user-dxpbronze-feb2017:after {
+                content: " - 02/2017 DXP Competition 3rd Place";
+                display: none;
+            }
+            .flair-user-dxptop30-feb2017:after {
+                content: " - 02/2017 DXP Competition Top 25";
+                display: none;
+            }            
+
+            .flair-user-dxpgold-may2017:after {
+                content: " - 05/2017 DXP Competition Winner";
+                display: none;
+            }
+            .flair-user-dxpsilver-may2017:after {
+                content: " - 05/2017 DXP Competition 2nd Place";
+                display: none;
+            }
+            .flair-user-dxpbronze-may2017:after {
+                content: " - 05/2017 DXP Competition 3rd Place";
+                display: none;
+            }
+            .flair-user-dxptop30-may2017:after {
+                content: " - 05/2017 DXP Competition Top 25";
+                display: none;
+            }    
+
+            .flair-user-dxpgold-may2017:hover,
+            .flair-user-dxpsilver-may2017:hover,
+            .flair-user-dxpbronze-may2017:hover,
+            .flair-user-dxptop30-may2017:hover,
+            .flair-user-dxptop30-feb2017:hover,
+            .flair-user-dxpgold-feb2017:hover,
+            .flair-user-dxpsilver-feb2017:hover,
+            .flair-user-dxpbronze-feb2017:hover,
+            .flair-user-dxptop30:hover,
+            .flair-user-dxpgold:hover,
+            .flair-user-dxpsilver:hover,
+            .flair-user-dxpbronze:hover{
+
+            }
+            .flair-user-dxpgold-may2017:hover:after,
+            .flair-user-dxpsilver-may2017:hover:after,
+            .flair-user-dxpbronze-may2017:hover:after,
+            .flair-user-dxptop30-may2017:hover:after,
+            .flair-user-dxptop30-feb2017:hover:after,
+            .flair-user-dxpgold-feb2017:hover:after,
+            .flair-user-dxpsilver-feb2017:hover:after,
+            .flair-user-dxpbronze-feb2017:hover:after,
+            .flair-user-dxptop30:hover:after,
+            .flair-user-dxpgold:hover:after,
+            .flair-user-dxpsilver:hover:after,
+            .flair-user-dxpbronze:hover:after {
+            display: inline;
+            }
+            .flair-user-dxpgold-may2017:before,
+            .flair-user-dxpgold-feb2017:before,
+            .flair-user-dxpgold:before {
+                background-position: -72px -192px;
+            }
+            .flair-user-dxpsilver-may2017:before,
+            .flair-user-dxpsilver-feb2017:before,
+            .flair-user-dxpsilver:before {
+                background-position: -72px -216px;
+            }
+            .flair-user-dxpbronze-may2017:before,
+            .flair-user-dxpbronze-feb2017:before,
+            .flair-user-dxpbronze:before {
+                background-position: -72px -240px; 
+            }
+            .flair-user-dxptop30-may2017:before,
+            .flair-user-dxptop30-feb2017:before,
+            .flair-user-dxptop30:before {
+                background-position: -72px -264px; 
+            }
+            .flair-user-dxpgold-may2017,
+            .flair-user-dxpgold-feb2017,
+            .flair-user-dxpgold
+            {
+                background: #F09819; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #F09819 , #EDDE5D); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                border: 1px solid #c3a755;
+                color: white;
+                text-shadow: 0px 0px 5px #3a2f0d;
+                }
+            .flair-user-dxpsilver-may2017,
+            .flair-user-dxpsilver-feb2017,
+            .flair-user-dxpsilver
+            {
+                background: #CCCCCC;
+                background: -moz-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -webkit-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -o-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: -ms-linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                background: linear-gradient(to bottom,  #EAEAEA 0%,#E2E2E2 56%,#CCCCCC 100%);
+                border: 1px solid #c3a755;
+                color: white;
+                text-shadow: 0px 0px 5px #3a2f0d;
+                }
+            .flair-user-dxpbronze-may2017,
+            .flair-user-dxpbronze-feb2017,
+            .flair-user-dxpbronze
+            {
+                background: #9E7E17;
+                background: -moz-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -webkit-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -o-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: -ms-linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                background: linear-gradient(to bottom,  #DAD4C0 0%,#9E7E17 56%,#7B5213 100%);
+                border: 1px solid #c3a755;
+                color: white;
+                text-shadow: 0px 0px 4px #000000;
+            }
+            .flair-other-40k:before { background-position: 0px -1176px; }           .flair-other-40k:after {content: "40,000 Subscribers!";}
+            .flair-other-50k:before { background-position: 0px -1200px; }           .flair-other-50k:after {content: "50,000 Subscribers!";}
+            .flair-other-60k:before { background-position: -126px -147px; width: 38px !important; height: 18px !important; margin: -5px 1px !important; }      
+            .flair-other-60k:after {content: "60,000 Subscribers!";}
+            .flair-other-80k:before { background-position: -126px -171px; width: 38px !important; height: 18px !important; margin: -5px 1px !important; }
+            .flair-other-80k:after {content: "80,000 Subscribers!";}
+            .flair-other-90k:before { background-position: -126px -195px; width: 38px !important; height: 18px !important; margin: -5px 1px !important; }
+            .flair-other-90k:after {content: "90,000 Subscribers!";}
+            .flair-other-100k:before { background-position: -126px -219px; width: 38px !important; height: 18px !important; margin: -5px 1px !important; }
+            .flair-other-100k:after {content: "100,000 Subscribers!";}
+
+            .flair-user-prezleek { border: 0 !important; background: transparent !important; }
+            .flair-user-prezleek:before { background-position: -72px -1200px; width: 90px!important; } 
+
+            .flair-user-nvip:before { background-position: -126px -243px; width: 38px !important; height: 18px !important; margin: -5px 1px !important;} 
+            .flair-user-nvip:after {content: "Not Very Important Person";}
+
+    /*------------ 4.4 Other Flairs ------------*/
+
+        /*------------ 4.4.1 Link/Post Flairs ------------*/
+            .linkflairlabel {
+                padding: 0px 2px 0px 2px;
+                border: 1px solid gray;
+                font-weight: bold;
+                vertical-align:middle;
+            }
+
+            .linkflair-red .linkflairlabel {
+               border-color: red;
+               color: red;
+            }
+
+            .linkflair-alert .linkflairlabel {
+               border-color: red;
+               color: red;
+            }
+
+            .linkflair-runelab .linkflairlabel {
+               border-color: #eac978;
+               color: #af8009;
+            }
+
+            .res-nightmode .linkflair-runelab .linkflairlabel {
+            background-color: #ffe094;
+            }
+
+            .linkflair-green .linkflairlabel {
+               border-color: green;
+               color: green;
+            }
+
+            .linkflair-ninja .linkflairlabel {
+               border-color: black;
+               color: black;
+            }
+            
+            .linkflair-red .thumbnail{
+                background: url(%%sprite%%) no-repeat -375px -186px !important;
+                height:0!important;
+                width:0!important;
+                padding:68px 0 0 69px!important;
+            }
+            
+            .linkflair-reply a.title {
+                padding-right: 15px;
+                position: relative;
+            }
+            
+
+            .linkflair-reply a.title:after {
+                position: absolute;
+                content: "";
+                background: url(%%sprite%%) no-repeat -507px -186px;
+                height: 14px;  
+                width: 16px; 
+                right: -6px;
+            }
+            .linkflair-reply .linkflairlabel{display:none}
+            .linkflair-reply.linkflair-runelab .linkflairlabel {display:initial}
+            .linkflair-reply.linkflair-ninja .linkflairlabel {display:initial}
+            .linkflair-reply.linkflair-red .linkflairlabel {display:initial}
+
+            /*------------ 4.2.2 Verified Jagex URLS ------------*/
+                a[href^="runescape.com/"]:after,
+                a[href^="http://runescape.com/"]:after, 
+                a[href^="services.runescape.com/"]:after,
+                a[href^="http://services.runescape.com/"]:after,
+                a[href^="secure.runescape.com/"]:after,
+                a[href^="https://secure.runescape.com/"]:after,
+                a[href^="support.runescape.com/"]:after,
+                a[href^="https://support.runescape.com/"]:after,
+                a[href^="forum.runescape.com/"]:after,
+                a[href^="http://forum.runescape.com/"]:after{
+                    background: url(%%sprite%%) no-repeat -537px -156px;
+                    width:16px;
+                    height:16px;
+                    display:inline-block;
+                    content:'';
+                    padding: 0 5px;
+                }
+
+                .usertext a[href^="runescape.com/"],
+                .usertext a[href^="http://runescape.com/"], 
+                .usertext a[href^="services.runescape.com/"],
+                .usertext a[href^="http://services.runescape.com/"],
+                .usertext a[href^="secure.runescape.com/"],
+                .usertext a[href^="https://secure.runescape.com/"],
+                .usertext a[href^="support.runescape.com/"],
+                .usertext a[href^="https://support.runescape.com/"],
+                .usertext a[href^="forum.runescape.com/"],
+                .usertext a[href^="http://forum.runescape.com/"]{
+                    background-color: #aaffaa;
+                    border: 1px solid #008000;
+                    border-radius: 3px;
+                    color: #0e880e !important;
+                }
+
+                a[href^="runescape.com/"].thumbnail.loggedin:after,
+                a[href^="http://runescape.com/"].thumbnail.loggedin:after,
+                a[href^="services.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="http://services.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="secure.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="https://secure.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="support.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="https://support.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="forum.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="forum.runescape.com/"].thumbnail.loggedin:after,
+                a[href^="http://forum.runescape.com/"].thumbnail.loggedin:after{
+                    display:none;
+                }
+
+            
+/*------------ 1337 RES ------------*/
+
+    /*------------ 1337.1 Header ------------*/
+        #srDropdownContainer a{
+            color: #e1bb34 !important;
+            font-weight: bold;
+            text-shadow: 1px 1px 0px rgba(73, 94, 113, 0.8);
+        }
+    
+        #RESShortcutsViewport, .srSep {
+            color: white;
+        }
+        
+
+        #header-bottom-right {
+            position: absolute;
+            top: 266px !important;
+            width: 329px;
+            text-align: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    
+        #header-bottom-right a{
+            color: white !important;
+        }
+        
+        #header-bottom-right .pref-lang, 
+        #header-bottom-right .userbarHide, 
+        #header-bottom-right > .separator:nth-of-type(5)  {
+            display: none !important;
+        }
+        
+        #header-bottom-right .user {
+            padding: 0;
+        }
+        
+        #header-bottom-right a:hover{
+            color: #e1bb34 !important;
+        }
+    
+        #userbarToggle.userbarHide {
+            background-color: rgba(0,0,0,0.5) !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+            border: 0;
+            margin-left: 6px;
+            color: white !important;
+        }
+    
+        #userbarToggle.userbarShow {
+            background-color: rgba(0,0,0,0.8) !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+            border: 0;
+            margin: 0 !important;
+            color: white !important;
+        }
+    
+        .user {
+            padding-left: 6px;
+        }
+    
+        #RESShortcuts a, #RESStaticShortcuts a {
+            color: white !important;
+            text-shadow: 1px 1px 0px rgba(73, 94, 113, 0.8);
+        }
+    
+        #RESShortcuts a:hover, #RESStaticShortcuts a:hover {
+            color: #e1bb34 !important;
+        }
+    
+        #RESShortcutsEditContainer > div, #RESShortcutsEditContainer{
+            background-color: rgba(0,0,0,0.5) !important;
+            color: white !important;
+        }
+    
+        /*------------ 1337.1.1 Header Alerts ------------*/
+            .res-nightmode .side .md ol:first-of-type {
+                background: none !important;
+            }
+    
+    /*------------ 1337.2 Sidebar ------------*/
+        .res-nightmode .side .submit, 
+        .res-nightmode .side .submit .morelink, 
+        .res-nightmode #search input {
+            background-color: inherit !important;
+            border: 0 !important;
+            color: none !important;
+        }
+    
+        .res-nightmode .titlebox blockquote {
+            text-shadow: none !important;
+        }
+        
+        .res-nightmode .side .titlebox, .res-nightmode .flairtoggle {
+            background-color: transparent !important;
+            border: 0 !important;
+        }
+        
+        .voteWeight {
+            background: none !important;
+        }
+    
+    /*------------ 1337.3 Flairs ------------*/
+        /*------------ 1337.3.1 Links ------------*/
+            .res-nightmode .linkflair-runelab .linkflairlabel {
+                background-color: #ffe094;
+            }
+    
+    /*------------ 1337.4 Nightmode ------------*/
+        .res-nightmode .thumbnail {
+            background-color: rgb(187,187,187) !important;
+        }
+        
+        .res-nightmode #header-bottom-left {
+            background: rgba(0,0,0,0.5);
+        }
+    
+    /*------------ 1337.5 Super Secret ------------*/
+        /*------------ 1337.6 Dave in Space ------------*/
+            #baconBit {     
+                position: fixed;
+                width: 339px!important;
+                height: 442px!important;
+                background-image: url(%%dave%%)!important;
+                top: -5%;
+                left: -5%;
+                z-index: 999999;
+                -webkit-transform: scale(3,3), rotate(0deg);
+                -moz-transform: scale(3,3) rotate(0deg);    
+                transform: scale(3,3), rotate(0deg);
+            } 
+            #baconBit.makeitrain {
+                top: 100%;
+                left: 100%;
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                }
+            #baconBit {
+                  -webkit-transition: all 10s linear !important;
+                  -moz-transition: all 10s linear !important;
+                  -o-transition: all 10s linear !important;
+                  -ms-transition: all 10s linear !important; 
+            }
+
+.RESImage {
+z-index: 200000000 !important;
+}
+
+.res body:not(.loggedin) .side .usertext .md h2:nth-of-type(2) {
+margin-top: 0 !important;
+}
+
+.res body:not(.loggedin) .side form.usertext {
+padding-top: 135px;
+}
+
+.stickied-tagline{
+  font-size: 0;
+}
+.stickied-tagline::after{
+   content:"stickied post";
+   font-size: x-small;
+}
+
+html[lang="nf"] .sitetable .thing.linkflair-humor{display:none}

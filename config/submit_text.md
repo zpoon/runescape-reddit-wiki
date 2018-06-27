@@ -1,0 +1,3 @@
+Please read [the rules and post guidelines](https://www.reddit.com/r/runescape/wiki/rules) of /r/runescape before submitting any posts. Failure to do so can result in a ban from the subreddit.
+
+Also if you are new to reddit please read over the [reddiquette](https://www.reddit.com/wiki/reddiquette), the reddiquette is an informal expression of the values of many redditors, as written by redditors themselves.
